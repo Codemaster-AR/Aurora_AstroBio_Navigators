@@ -1,51 +1,66 @@
-## 📥 How to Get the Files for **Aurora\_AstroBio\_Navigators**
-
-This guide provides the two primary methods for obtaining the source code and files from the `Codemaster-AR/Aurora_AstroBio_Navigators` GitHub repository.
+It looks like I stopped abruptly\! I apologize for the interruption. I will provide the complete and consolidated README instructions, including the crucial macOS-only note, the Bash commands, and the manual steps, exactly as requested.
 
 -----
 
-### **Method 1: Cloning the Repository (Recommended)**
+# ⚠️ NOTE: ONLY RUNS ON MACOS
 
-Cloning is the recommended method as it uses **Git**, which allows you to easily track updates and contribute changes.
+-----
 
-#### **Prerequisites**
+## 💻 AuroraGeneLab Setup Guide for macOS (Bash Instructions)
 
-You must have **Git** installed on your system. You can download it from [git-scm.com](https://git-scm.com/).
+This guide provides the complete procedure to acquire both the source code and the compiled application, organize them into the required **`AuroraGeneLab`** folder, and launch the **Aurora AstroBio Navigators** app.
 
-#### **Steps**
+### **Part 1: Initial Setup and Cloning (Terminal Commands)**
 
-1.  **Open your terminal or command prompt.**
+These commands will create the main project folder on your Desktop and clone the source code repository into it.
 
-2.  **Navigate** to the directory where you want to save the project (e.g., `cd ~/Development`).
+1.  **Open your Terminal** application (found in `/Applications/Utilities/`).
 
-3.  **Execute the following command** to clone the repository:
+2.  **Execute the following commands** one by one:
 
     ```bash
+    # 1. Navigate to the Desktop directory
+    cd ~/Desktop/
+
+    # 2. Create the main project directory named AuroraGeneLab
+    mkdir AuroraGeneLab
+
+    # 3. Navigate into the new directory
+    cd AuroraGeneLab
+
+    # 4. Clone the Aurora_AstroBio_Navigators source code
     git clone https://github.com/Codemaster-AR/Aurora_AstroBio_Navigators.git
     ```
 
-4.  **Change into the new directory:**
-
-    ```bash
-    cd Aurora_AstroBio_Navigators
-    ```
-
-You now have a full copy of the repository, including all its history. To update your local copy with any new changes, run `git pull` inside the `Aurora_AstroBio_Navigators` directory.
+After running these commands, the source code will be located in **`~/Desktop/AuroraGeneLab/Aurora_AstroBio_Navigators/`**.
 
 -----
 
-### **Method 2: Downloading the ZIP File (Simple)**
+### **Part 2: Download the Application (Manual)**
 
-If you do not want to use Git, you can download all the files as a compressed ZIP archive directly from the GitHub website.
+The executable application must be downloaded separately from the web and placed directly inside the main setup folder.
 
-#### **Steps**
+1.  **Visit the Download URL:**
+    Open your web browser and navigate to the application download page:
+    [https://astro-bio-navigator.w3spaces.com/](https://astro-bio-navigator.w3spaces.com/)
 
-1.  **Go to the repository page:**
-    [https://github.com/Codemaster-AR/Aurora\_AstroBio\_Navigators](https://github.com/Codemaster-AR/Aurora_AstroBio_Navigators)
-2.  Locate the green **`< > Code`** button on the main page.
-3.  Click the **`< > Code`** button.
-4.  In the dropdown menu that appears, click **`Download ZIP`**.
-5.  **Save** the file (`Aurora_AstroBio_Navigators-main.zip`) to your desired location.
-6.  **Extract** the contents of the ZIP file to access the project folders and files.
+2.  **Download the App:**
+    Click the appropriate link or button on the website to download the application package (this will typically be a `.dmg` or `.zip` file).
 
-***Note:** This method downloads a snapshot of the code at the time of download. You will need to repeat this process to get future updates.*
+3.  **Move the File:**
+    Move the downloaded file from your Downloads folder directly into the **`~/Desktop/AuroraGeneLab`** folder.
+
+-----
+
+### **Part 3: Finalize and Run**
+
+Your `AuroraGeneLab` folder should now contain the source code folder and the downloaded app file.
+
+1.  **Verify Structure:** Go to your **Desktop** and open the **`AuroraGeneLab`** folder. It should contain two main items:
+
+      * The **`Aurora_AstroBio_Navigators`** folder (from the clone).
+      * The **Downloaded App File** (e.g., `AstroBio_App.dmg`).
+
+2.  **Launch the Application:**
+
+      * **Double-click** the downloaded application file (the `.dmg` or `.app` file) inside the `AuroraGeneLab` folder to install or run the **Aurora AstroBio Navigators** application.
