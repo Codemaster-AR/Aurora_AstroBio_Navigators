@@ -1,6 +1,4 @@
-It looks like I stopped abruptly\! I apologize for the interruption. I will provide the complete and consolidated README instructions, including the crucial macOS-only note, the Bash commands, and the manual steps, exactly as requested.
 
------
 
 # ⚠️ NOTE: ONLY RUNS ON MACOS
 
