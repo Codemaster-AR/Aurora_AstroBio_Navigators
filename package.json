@@ -1,0 +1,78 @@
+{
+  "name": "genelab",
+  "productName": "Aurora - AstroBio Navigators v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./styles.css -o ./dist/styles.css",
+    "build": "electron-builder --mac --universal",
+    "clean": "rm -rf dist",
+    "package-mac": "npm run clean && electron-packager . 'Aurora - AstroBio Navigators v2' --platform=darwin --arch=x64,arm64 --out=dist --overwrite --prune=true",
+    "create-blank-dmg-arm64": "hdiutil create -ov -fs HFS+ -size 2g -volname 'GeneLab-arm64 Installer' dist/GeneLab-arm64.temp.dmg",
+    "mount-dmg-arm64": "hdiutil attach dist/GeneLab-arm64.temp.dmg -mountpoint /Volumes/GeneLab-arm64",
+    "copy-to-dmg-arm64": "cp -R 'dist/Aurora - AstroBio Navigators v2-darwin-arm64/Aurora - AstroBio Navigators v2.app' /Volumes/GeneLab-arm64/ && ln -s /Applications /Volumes/GeneLab-arm64/Applications",
+    "unmount-dmg-arm64": "hdiutil detach /Volumes/GeneLab-arm64",
+    "convert-dmg-arm64": "hdiutil convert dist/GeneLab-arm64.temp.dmg -format UDRW -o dist/GeneLab-arm64.dmg",
+    "create-blank-dmg-x64": "hdiutil create -ov -fs HFS+ -size 2g -volname 'GeneLab-x64 Installer' dist/GeneLab-x64.temp.dmg",
+    "mount-dmg-x64": "hdiutil attach dist/GeneLab-x64.temp.dmg -mountpoint /Volumes/GeneLab-x64",
+    "copy-to-dmg-x64": "cp -R 'dist/Aurora - AstroBio Navigators v2-darwin-x64/Aurora - AstroBio Navigators v2.app' /Volumes/GeneLab-x64/ && ln -s /Applications /Volumes/GeneLab-x64/Applications",
+    "unmount-dmg-x64": "hdiutil detach /Volumes/GeneLab-x64",
+    "convert-dmg-x64": "hdiutil convert dist/GeneLab-x64.temp.dmg -format UDRW -o dist/GeneLab-x64.dmg"
+  },
+  "build": {
+    "files": [
+      "**/*",
+      "dist/**/*"
+    ],
+    "extraFiles": [
+      "LICENSE"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "dmg": {
+      "iconSize": 100,
+      "contents": [
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 220,
+          "type": "file"
+        }
+      ]
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@electron/universal": "^3.0.1",
+    "autoprefixer": "^10.4.21",
+    "create-dmg": "^7.1.0",
+    "electron": "^38.2.1",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.14"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}
