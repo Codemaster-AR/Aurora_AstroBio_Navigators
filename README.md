@@ -1,8 +1,4 @@
-Yes, I can absolutely add a prominent "Instructions" title to the top of the README.
 
-Here is the revised document with the new major heading.
-
------
 
 # INSTRUCTIONS
 
