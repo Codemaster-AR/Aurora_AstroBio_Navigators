@@ -1,8 +1,10 @@
-You are correct\! Running the proxy server is the final step for the command-line portion, and the application download is a separate manual step.
+Yes, I can absolutely add a prominent "Instructions" title to the top of the README.
 
-I have re-ordered **Part 3** and **Part 4** to reflect the logical flow: Setup, Download, then Run the components.
+Here is the revised document with the new major heading.
 
-Here is the corrected README:
+-----
+
+# INSTRUCTIONS
 
 -----
 
