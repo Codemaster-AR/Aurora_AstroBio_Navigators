@@ -1,4 +1,10 @@
+You are correct\! Running the proxy server is the final step for the command-line portion, and the application download is a separate manual step.
 
+I have re-ordered **Part 3** and **Part 4** to reflect the logical flow: Setup, Download, then Run the components.
+
+Here is the corrected README:
+
+-----
 
 # ⚠️ NOTE: ONLY RUNS ON MACOS
 
@@ -8,25 +14,50 @@
 
 This guide provides the complete procedure to acquire both the source code and the compiled application, organize them into the required **`AuroraGeneLab`** folder, and launch the **Aurora AstroBio Navigators** app.
 
+-----
+
+### **Part 0: Install Homebrew and Node.js (Prerequisites)**
+
+The proxy server requires **Node.js** to run, and the best way to install Node.js on a Mac is by using the package manager **Homebrew**.
+
+1.  **Open your Terminal** application.
+
+2.  **Install Homebrew** (if you don't have it):
+
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+
+    *Follow the on-screen instructions, which may include entering your password.*
+
+3.  **Install Node.js** (includes npm) using Homebrew:
+
+    ```bash
+    brew install node
+    ```
+
+-----
+
 ### **Part 1: Initial Setup and Cloning (Terminal Commands)**
 
 These commands will create the main project folder on your Desktop and clone the source code repository into it.
 
-1.  **Open your Terminal** application (found in `/Applications/Utilities/`).
-
-2.  **Execute the following commands** one by one:
+1.  **Navigate to the Desktop directory:**
 
     ```bash
-    # 1. Navigate to the Desktop directory
     cd ~/Desktop/
+    ```
 
-    # 2. Create the main project directory named AuroraGeneLab
+2.  **Execute the following setup commands** one by one:
+
+    ```bash
+    # 1. Create the main project directory named AuroraGeneLab
     mkdir AuroraGeneLab
 
-    # 3. Navigate into the new directory
+    # 2. Navigate into the new directory
     cd AuroraGeneLab
 
-    # 4. Clone the Aurora_AstroBio_Navigators source code
+    # 3. Clone the Aurora_AstroBio_Navigators source code
     git clone https://github.com/Codemaster-AR/Aurora_AstroBio_Navigators.git
     ```
 
@@ -34,7 +65,27 @@ After running these commands, the source code will be located in **`~/Desktop/Au
 
 -----
 
-### **Part 2: Download the Application (Manual)**
+### **Part 2: Set up the Node.js Proxy Dependencies**
+
+The proxy server (`proxy.js`) is required to handle network requests for the main application. You must install its dependencies first.
+
+1.  **Navigate to the Source Code Directory:**
+    Open your Terminal and make sure you are in the folder containing `proxy.js` (which is inside the cloned repo):
+
+    ```bash
+    cd ~/Desktop/AuroraGeneLab/Aurora_AstroBio_Navigators/
+    ```
+
+2.  **Install the 'express' dependency:**
+    The proxy requires the **Express** framework to run. Use Node Package Manager (npm) to install it:
+
+    ```bash
+    npm install express
+    ```
+
+-----
+
+### **Part 3: Download the Application (Manual)**
 
 The executable application must be downloaded separately from the web and placed directly inside the main setup folder.
 
@@ -50,15 +101,20 @@ The executable application must be downloaded separately from the web and placed
 
 -----
 
-### **Part 3: Finalize and Run**
+### **Part 4: Run the Proxy and Launch the Main Application**
 
-Your `AuroraGeneLab` folder should now contain the source code folder and the downloaded app file.
+With all files downloaded and dependencies installed, you can now run the proxy and launch the main app.
 
-1.  **Verify Structure:** Go to your **Desktop** and open the **`AuroraGeneLab`** folder. It should contain two main items:
+1.  **Run the Proxy Server:**
+    If you are still in the **`Aurora_AstroBio_Navigators/`** folder from Part 2, start the proxy server using Node.js:
 
-      * The **`Aurora_AstroBio_Navigators`** folder (from the clone).
-      * The **Downloaded App File** (e.g., `AstroBio_App.dmg`).
+    ```bash
+    node proxy.js
+    ```
+
+    The proxy server will now be running and listening for connections. **Keep this Terminal window open** while you use the main application.
 
 2.  **Launch the Application:**
+    Navigate to your **Desktop** and open the **`AuroraGeneLab`** folder.
 
       * **Double-click** the downloaded application file (the `.dmg` or `.app` file) inside the `AuroraGeneLab` folder to install or run the **Aurora AstroBio Navigators** application.
