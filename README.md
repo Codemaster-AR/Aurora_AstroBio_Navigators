@@ -140,3 +140,6 @@ With all files downloaded and dependencies installed, you can now run the proxy 
 > **This double execution is a known, required configuration step. Skipping this will cause a setup failure.**
 
 ---
+
+**For more details, or if you face any issue, please contact codemaster.ar@gmail.com.**
+
