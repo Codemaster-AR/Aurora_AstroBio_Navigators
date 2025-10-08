@@ -1,4 +1,4 @@
-# INSTRUCTIONS (Read till bottom, all steps are extremely crucial and are unavoidable)
+# INSTRUCTIONS (Read till bottom, all steps are extremely crucial and are unavoidable):
 
 -----
 
