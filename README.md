@@ -114,3 +114,29 @@ With all files downloaded and dependencies installed, you can now run the proxy 
     Navigate to your **Desktop** and open the **`AuroraGeneLab`** folder.
 
       * **Double-click** the downloaded application file (the `.dmg` or `.app` file) inside the `AuroraGeneLab` folder to install or run the **Aurora AstroBio Navigators** application.
+
+### **Make sure the terminal app is running at all times for the proxy to work and connect!**
+### **All data is live and has a real-time connection with NASA OSRDR!**
+
+
+
+
+
+-----
+
+## ⚠️ **CRITICAL WARNING: MANUAL REPEAT REQUIRED\!** ⚠️
+
+-----
+
+> \*\*After your Mac opens from a restart or if the terminal application was quit, you must follow the following commands in the given order for the app to fucntion and connect properly, this is live data:
+>
+> ```bash
+> cd ~/Desktop/AuroraGeneLab/Aurora_AstroBio_Navigators/
+> node proxy.js
+> 
+> ```
+> 
+>
+> **This double execution is a known, required configuration step. Skipping this will cause a setup failure.**
+
+---
